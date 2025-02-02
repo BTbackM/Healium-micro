@@ -29,5 +29,5 @@ go mod tidy
 git add .
 git commit -m "chore: generate proto files for ${SERVICE_NAME}"
 git push origin HEAD:main
-git tag -fa golang/${SERVICE_NAME}/v${VERSION} -m "chore: release ${SERVICE_NAME} v${VERSION}"
-git push origin refs/tags/golang/${SERVICE_NAME}/v${VERSION}
+git tag -fa golang/${SERVICE_NAME}/${VERSION} -m "chore: release ${SERVICE_NAME} ${VERSION}"
+git push origin refs/tags/golang/${SERVICE_NAME}/${VERSION}
