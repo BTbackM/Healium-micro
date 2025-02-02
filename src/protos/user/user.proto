@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/BTbackM/Healium-micro/pb";
+
+message CreateUserRequest {
+  string first_name = 1;
+  string last_name = 2;
+  string dni = 3;
+  google.protobuf.Timestamp birth_date = 4;
+  string email = 5;
+  string phone = 6;
+  string address = 7;
+}
+
+message CreateUserResponse { string id = 1; }
+
+service User {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+}
