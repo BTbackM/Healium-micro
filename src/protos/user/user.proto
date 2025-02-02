@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/BTbackM/Healium-micro/pb";
+option go_package = "github.com/BTbackM/Healium-micro/src/protos/golang/user";
 
 message CreateUserRequest {
   string first_name = 1;
