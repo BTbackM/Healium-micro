@@ -6,6 +6,7 @@ VERSION=$2
 # Config git
 git config --global user.name "BTbackM"
 git config --global user.email "felix.blanco@utec.edu.pe"
+git fetch --all && git checkout main
 
 # Install protoc
 sudo apt-get install -y protobuf-compiler golang-goprotobuf-dev
@@ -26,5 +27,6 @@ go mod tidy
 # Commit and push changes
 git add .
 git commit -m "chore: generate proto files for ${SERVICE_NAME}"
+git push origin HEAD:main
 git tag -fa golang/${SERVICE_NAME}/v${VERSION} -m "chore: release ${SERVICE_NAME} v${VERSION}"
-git push origin main --tags
+git push origin refs/tags/golang/${SERVICE_NAME}/v${VERSION}
