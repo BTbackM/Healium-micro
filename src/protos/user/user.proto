@@ -14,7 +14,7 @@ message CreateUserRequest {
   string address = 7;
 }
 
-message CreateUserResponse { string id = 1; }
+message CreateUserResponse { int id = 1; }
 
 service User {
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
